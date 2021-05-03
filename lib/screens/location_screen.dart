@@ -32,7 +32,7 @@ class _LocationScreenState extends State<LocationScreen> {
         cityName = " ";
         return;
       }
-      double temp = weatherData['main']['temp'];
+      int temp = weatherData['main']['temp'];
       temperature = temp.toInt();
       var condition = weatherData['weather'][0]['id'];
       cityName = weatherData['name'];
@@ -63,9 +63,9 @@ class _LocationScreenState extends State<LocationScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   TextButton(
-                    onPressed: () async {
-                      var weatherData = await weather.getLocationWeather();
-                      updateUI(weatherData);
+                    onPressed: ()  {
+                      // var weatherData = await weather.getLocationWeather();
+                      // updateUI(weatherData);
                     },
                     child: Icon(
                       Icons.near_me,

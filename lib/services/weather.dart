@@ -8,6 +8,7 @@ class WeatherModel {
     await location.getCurrentLocation();
 
 
+
     NetworkHelper netHelp = NetworkHelper(
         "https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=e8e7eeb6de009c47a7e766410aba5b47&units=metric");
     var weatherData = await netHelp.getData();
